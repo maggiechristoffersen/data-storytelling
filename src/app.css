@@ -1,11 +1,22 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #E9E3B4;
+  font-family: Garamond, serif;
+  font-style: italic;
   line-height: 1.5;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:focus {
+  outline: none;
+}
+
+
+* {
+  margin: 0px;
 }

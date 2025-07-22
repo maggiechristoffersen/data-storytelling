@@ -1,145 +1,115 @@
 <script>
-    import * as Highcharts from "highcharts";
-    import "highcharts/modules/exporting";
-    import { Chart } from "@highcharts/svelte";
-    import Scroller from "../lib/Scroller.svelte";
-    import ArticleText from "../lib/ArticleText.svelte";
-
-    let options = {
-        chart: {
-            type: "pie",
-        },
-        title: {
-            text: "An Example Pie Chart",
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                dataLabels: [
-                    {
-                        enabled: true,
-                        distance: 20,
-                    },
-                    {
-                        enabled: true,
-                        distance: -40,
-                        format: "{point.percentage:.1f}%",
-                        style: {
-                            fontSize: "1.2em",
-                            textOutline: "none",
-                        },
-                        filter: {
-                            operator: ">",
-                            property: "percentage",
-                            value: 10,
-                        },
-                    },
-                ],
-            },
-        },
-        series: [
-            {
-                name: "Group",
-                data: [
-                    {
-                        name: "Group 1",
-                        y: 151,
-                    },
-                    {
-                        name: "Group 2",
-                        sliced: true,
-                        selected: true,
-                        y: 180,
-                    },
-                    {
-                        name: "Group 3",
-                        y: 32,
-                    },
-                    {
-                        name: "Group 4",
-                        y: 103,
-                    },
-                    {
-                        name: "Group 5",
-                        y: 77,
-                    },
-                ],
-            },
-        ],
-    };
+  import Scroller from "../lib/Scroller.svelte";
+  import ArticleText from "../lib/ArticleText.svelte";
 </script>
 
 <div>
-    <Scroller layout="right">
-        {#snippet sticky()}
-            <div class="chart">
-                <Chart {options} highcharts={Highcharts} />
-            </div>
-            <p>
-                Here's an example chart using
-                <a href="https://www.highcharts.com/">Highcharts</a>!
-            </p>
-            <p>
-                📈 <strong>Highcharts</strong> is a super-flexible library for
-                creating all kinds of charts. See demos of different chart types
-                <a href="https://www.highcharts.com/demo">here</a>.
-            </p>
-            <p>
-                Since we're using Highcharts through Svelte, the syntax is a
-                little different from what you might see in the demos. But all
-                of Highcharts' functionality is available through the Highcharts
-                for Svelte package.
-            </p>
-            <p>
-                The configuration is done through the
-                <code>options</code> json object passed to the chart, which you'll
-                see in the source code for this template.
-            </p>
-            <p>
-                Use the
-                <a href="https://api.highcharts.com/highcharts/"
-                    >API reference</a
-                >
-                to understand what each element in the <code>options</code> object
-                does.
-            </p>
-        {/snippet}
+  <Scroller layout="right">
+    {#snippet sticky()}
+      <img
+        src="detroit-worker.png"
+        alt="An African-American worker assembling an airplane at Briggs Manufacturing Company in Detroit, Michigan."
+        style="max-height: 60vh; width: auto; display: block; margin: 0 auto 1rem auto;"
+      />
+      <div
+        class="image-text"
+        style="text-align: center; margin-left: 10%; margin-right: 10%"
+      >
+        <p>
+          <a style="color: #2E5339" href="https://www.loc.gov/item/2017690662/"
+            >The above image shows a worker at Briggs Manufacturing Company in
+            Detroit, Michigan assembling parts of an airplane as part of the war
+            effort during the second world war.
+          </a>
+          This image was taken in 1942. <br /> <br />
+          During this period, the wealth of Black Americans increased faster than
+          it ever had.
+          <a
+            style="color: #2E5339"
+            href="https://www.irp.wisc.edu/resource/the-great-black-migration-opportunity-and-competition-in-northern-labor-markets/"
+          >
+            While in 1940, Black men earned 40 cents for each dollar earned by
+            white men, it increased by 1970 to 70 cents for each dollar.
+          </a>
+          The Black community's migration to higher-paying cities through the Great
+          Migration allowed this increase to occur, though Black American's educational
+          opportunities increased throughout this time as well.
+        </p>
+      </div>
+    {/snippet}
 
-        {#snippet scrolly()}
-            <ArticleText>
-                <strong>Welcome to the KWK Data Scrollytelling Template!</strong
-                >
-            </ArticleText>
+    {#snippet scrolly()}
+      <ArticleText>
+        Between approximately 1910 and 1970, nearly six million Black Americans
+        moved out of the American South into areas concentrated in the
+        Northeast, Midwest, and Western areas of the United States.
+      </ArticleText>
 
-            <ArticleText>
-                This is a <strong>basic example</strong> of how you might create
-                a scrollytelling piece using Svelte and Highcharts.
-            </ArticleText>
+      <ArticleText>
+        As the United States entered the first world war in 1917, numerous
+        non-agricultural jobs were left available due to much of the workforce
+        going abroad to fight in the war, and a decrease in European
+        immigration.
+      </ArticleText>
 
-            <ArticleText>
-                You can use this template as a <strong>starting point</strong>
-                for your project.
-                <br /><br />
-                Or, if you want to build something from scratch, you can use it as
-                a <strong>reference</strong> for specific functionality.
-            </ArticleText>
+      <ArticleText>
+        <p>Many Black Americans settled in Midwestern cities like Chicago,</p>
 
-            <ArticleText>
-                This is <strong>just one way</strong> that scrollytelling can
-                look.
-                <br /><br />
-                <strong>
-                    If you use this template, be sure to modify it and make it
-                    your own!
-                </strong>
-            </ArticleText>
-        {/snippet}
-    </Scroller>
+        <img
+          src="slide1.jpg"
+          alt="African-American apartments in Chicago, Illinois in 1941."
+          style="width: 100%"
+        />
+        <p style="font-size: 0.8rem">
+          <a
+            style="color: #2E5339"
+            href="https://loc.gov/pictures/resource/fsa.8a29902/"
+          >
+            African-American apartments in Chicago, Illinois in 1941.
+          </a>
+        </p>
+      </ArticleText>
+
+      <ArticleText>
+        <p>Detroit,</p>
+        <img
+          src="slide2.jpg"
+          alt="The Sojourner Truth Homes in Detroit, Michigan in 1942. The homes were built for Black defense industry workers during World War II."
+          style="width: 100%"
+        />
+        <p style="font-size: 0.8rem">
+          <a style="color: #2E5339" href="https://www.loc.gov/item/2017844920/">
+            The Sojourner Truth Homes in Detroit, Michigan in 1942. The homes
+            were built for Black defense industry workers during World War II.
+          </a>
+        </p>
+      </ArticleText>
+
+      <ArticleText>
+        <p>and Cleveland.</p>
+        <img
+          src="slide3.jpg"
+          alt="The Phyllis Wheatley association, a home for unmarried African-American women and girls established in Cleveland, Ohio, 1911."
+          style="width: 100%;"
+        />
+        <p style="font-size: 0.8rem">
+          <a
+            style="color: #2E5339"
+            href="https://digital-collections.columbuslibrary.org/digital/collection/postcard/id/11398"
+          >
+            The Phyllis Wheatley association, a home for unmarried
+            African-American women and girls established in Cleveland, Ohio,
+            1911.
+          </a>
+        </p>
+      </ArticleText>
+    {/snippet}
+  </Scroller>
 </div>
 
 <style>
-    .chart {
-        width: 90%;
-        margin: 0px auto;
-    }
+  .chart {
+    width: 90%;
+    margin: 0px auto;
+  }
 </style>
